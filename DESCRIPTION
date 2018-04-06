@@ -1,0 +1,19 @@
+Package: FlightSim
+Title: R-Package for estimating energy consumption during avian flight
+Version: 0.0.0.9000
+Authors@R: person("Josephine", "Tetteh", email = "josephinetetteh@aims.ac.za", role = c("aut", "cre"))
+Description: Estimates avian flight performance parameters and flight energy cnsumption in a 
+    3-dimensional space by implementing the basic theory of aerodynamics whilst taking into 
+    consideration the effectof wind on flight. It takes inspiration from the program 'Flight',
+    developed by Colin Pennycuick (Pennycuick (2008), "Modelling the flying bird". Amsterdam: 
+    Elsevier. ISBN 0-19-857721-4) and the 'afpt'R-Package developed by Marco KleinHeerenbrink 
+    (https://CRAN.R-project.org/package=afpt). Flight performance is estimated based on basic
+    morphological measurements such as body mass, wingspan and wing area. 'FlightSim' can be 
+    used to make predictions on how much energy is required and used by birds during flight.
+Depends: R (>= 3.3.3)
+Maintainer: Josephine Tetteh
+Author: Josephine Tetteh
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
