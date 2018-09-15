@@ -46,7 +46,7 @@ BirdMorphParam = function(BMass, WSpan, WArea, C_db=0.2, C_dpro=0.2, ADensity = 
   Mmusc = 0.17*BMass # calculate muscle mass
 
   #print results
-  BirdParam = data.frame(BMass = BMass, BWeight, WSpan, WArea, AR, WLoading, C_db, C_dpro, flap_freq, Sb, Pmet, Pbmr, Vmp, Pam)
+  BirdParam = data.frame(BMass, BWeight, WSpan, WArea, AR, ADensity, WLoading, C_db, C_dpro, flap_freq, Sb, Pmet, Pbmr, Vmp, Pam, grav,k)
   return(BirdParam)
 }
 # END OF FUNCTION 1

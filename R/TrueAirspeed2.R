@@ -6,14 +6,19 @@
 #'
 #' @param FlightSpeedComponents Components of speed of flight
 #' @param V_WIND Windspeed
-#' @param theta Wind directions
-#' @param  phi Wind directions
+#' @param theta Wind directions in degrees
+#' @param  phi Wind directions in degrees
 #'
-#' @details bbb
+#' @return True airspeed
+#' @examples
+#' x <- c(1:5)
+#' y <- c(1:5)
+#' z <- c(1:5)
+#' t <- c(1:5)
+#' FS.Components <- FlightSpeedComponents(t,x,y,z)
+#' T.airspeed <- TrueAirSpeed1(FS.Components, 30, 15, 10)
 #'
-#' @return TrueAirSpeed
 #'
-#' @references bbb
 #' @export
 
 

@@ -1,13 +1,9 @@
 \name{trajectory}
 \alias{trajectory}
 \docType{data}
-\title{ Sample trajectory
-%%   ~~ data name/kind ... ~~
-}
-\description{A 3D flight trajectory containing x,y,z- coordinates and time.
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
-}
-\usage{data("trajectory")}
+\title{ Sample trajectory}
+\description{A 3D flight trajectory containing x,y,z- coordinates and time.}
+\usage{data(trajectory)}
 \format{
   A data frame with 40 observations on the following 4 variables.
   \describe{
@@ -17,17 +13,13 @@
     \item{\code{t}}{a numeric vector}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
-\examples{
-data(trajectory)
-## maybe str(trajectory) ; plot(trajectory) ...
-}
+\details{3D flight trajectories of the \emph{Peregrine falcon} obtained from Akos et al (2008).}
+\examples{utils::data(trajectory)
+FSC <- FlightSpeedComponents(trajectory[,4], trajectory[,1], trajectory[,2], trajectory[,3])}
+
+\references{Akos, Z., Nagy, M., & Vicsek, T. (2008). Comparing bird and human soaring strategies. Proceedings of the National Academy of Sciences, 105(11), 4139-4143.}
 \keyword{datasets}
+
+
+
+

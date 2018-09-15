@@ -4,11 +4,11 @@
 \alias{FlightPerformance}
 \title{Compute flight performance parameters}
 \usage{
-FlightPerformance(BirdParam, FlightSpeedComponents, TrueAirSpeed1,
+FlightPerformance(BirdMorphParam, FlightSpeedComponents, TrueAirSpeed1,
   TrueAirSpeed2, C_l, C_t)
 }
 \arguments{
-\item{BirdParam}{Basic morphological data of bird}
+\item{BirdMorphParam}{Basic morphological data of bird}
 
 \item{FlightSpeedComponents}{Calculated flight speed components}
 
@@ -37,12 +37,20 @@ mechanical and chemical power required for flight. The function makes use of the
 \code{BirdMorphParam} and flight speed from \code{FlightSpeedComponents} as well as the 3D position
 of the bird in flight. There is no default value for lift coefficient and thrust coefficient.
 To accounT for wind effect, the true airspeed is used either from \code{TrueAirSpeed1} or
-\code{TrueAirSpeed1}.
+\code{TrueAirSpeed2}.
+}
+\examples{
+utils::data(trajectory)
+trajectory = trajectory
+birdpa = BirdMorphParam(0.043, 0.4, 0.0171)
+FS.Components = FlightSpeedComponents(trajectory[,4],
+  trajectory[,1], trajectory[,2], trajectory[,3])
+T.airspeed = TrueAirSpeed1(FS.Components)
+FPerformance = FlightPerformance(birdpa,FS.Components,
+T.airspeed, C_l = 0.5, C_t = 0.1)
+
 }
 \references{
 Norberg, U. M. (2012). Vertebrate flight: mechanics, physiology, morphology, ecology and
-evolution (Vol. 27). Springer Science & Business Media.
-}
-\seealso{
-\code{FlightSpeedComponents}
+evolution (Vol. 27). Springer.
 }

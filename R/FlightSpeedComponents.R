@@ -14,9 +14,14 @@
 #' @param y y-position from data
 #' @param z z-position from data
 #' @return Numeric value of flight Speed
+#' @examples
+#' x <- c(1:5)
+#' y <- c(1:5)
+#' z <- c(1:5)
+#' t <- c(1:5)
+#' bird <- BirdMorphParam(0.043, 0.4, 0.0171)
+#' FS.Components <- FlightSpeedComponents(t,x,y,z)
 #'
-#' @references ...
-
 #' @export
 
 FlightSpeedComponents = function(t,x,y,z){

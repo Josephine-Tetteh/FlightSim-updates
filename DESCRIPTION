@@ -10,9 +10,8 @@ Description: Estimates avian flight performance parameters and flight energy cns
     (https://CRAN.R-project.org/package=afpt). Flight performance is estimated based on basic
     morphological measurements such as body mass, wingspan and wing area. 'FlightSim' can be 
     used to make predictions on how much energy is required and used by birds during flight.
-Depends: R (>= 3.3.3)
-Maintainer: Josephine Tetteh
-Author: Josephine Tetteh
+Depends: R (>= 3.3.3), scatterplot3d
+Author: Josephine Tetteh, Cang Hui, Pietro Landi
 License: GPL-3
 Encoding: UTF-8
 LazyData: true

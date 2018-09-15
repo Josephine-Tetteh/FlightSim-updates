@@ -11,11 +11,26 @@
 #' @param WindSpeed.y y-compenent of speed of wind
 #' @param WindSpeed.z z-compenent of speed of wind
 #'
-#' @details bbbb
+#' @details If x,y,z-components of wind speed are not given, flight speed obtained from \code{FlightSpeedComponents}
+#' is assumed as true airspeed.
 
-#' @return True air speed
+#' @return True airspeed
+#' @examples
+#' x <- c(1:5)
+#' y <- c(1:5)
+#' z <- c(1:5)
+#' t <- c(1:5)
+#' wx <- seq(0.05,1,length.out=5)
+#' wy <- seq(0.06,1.2,length.out=5)
+#' wz <- seq(0.07,1.5,length.out=5)
+#' FS.Components <- FlightSpeedComponents(t,x,y,z)
 #'
-#' @references bbb
+#' # When wind speed components are not given
+#' T.airspeed <- TrueAirSpeed1(FS.Components)
+#'
+#'# When wind speed components are given
+#' T.airspeed <- TrueAirSpeed1(FS.Components, wx, wy, wz)
+#'
 #' @export
 
 
@@ -26,10 +41,6 @@ TrueAirSpeed1 = function(FlightSpeedComponents, WindSpeed.x, WindSpeed.y, WindSp
   if(missing(WindSpeed.x))   WindSpeed.x = 0;
   if(missing(WindSpeed.y))   WindSpeed.y = 0;
   if(missing(WindSpeed.z))   WindSpeed.z = 0;
-  # if(is.nan(FlightSpeed.y))  WindSpeed.y = 0;
-  # if(is.infinite(FlightSpeed.x))  WindSpeed.x = 0;
-  # if(is.infinite(FlightSpeed.z))  WindSpeed.z = 0;
-  # if(FlightSpeed.z == "-Inf")  WindSpeed.z=0;
   WindSpeed.total = sqrt((WindSpeed.x^2 + WindSpeed.y^2 + WindSpeed.z^2))
   TAS = sqrt((FlightSpeed.x + WindSpeed.x)^2 + (FlightSpeed.y + WindSpeed.y)^2 + (FlightSpeed.z + WindSpeed.z)^2)
   vuframe = data.frame(TAS)

@@ -11,19 +11,23 @@ TrueAirSpeed2(FlightSpeedComponents, V_WIND, theta, phi)
 
 \item{V_WIND}{Windspeed}
 
-\item{theta}{Wind directions}
+\item{theta}{Wind directions in degrees}
 
-\item{phi}{Wind directions}
+\item{phi}{Wind directions in degrees}
 }
 \value{
-TrueAirSpeed
+True airspeed
 }
 \description{
 Calculate true airspeed from wind direction and speed
 }
-\details{
-bbb
-}
-\references{
-bbb
+\examples{
+x <- c(1:5)
+y <- c(1:5)
+z <- c(1:5)
+t <- c(1:5)
+FS.Components <- FlightSpeedComponents(t,x,y,z)
+T.airspeed <- TrueAirSpeed1(FS.Components, 30, 15, 10)
+
+
 }

@@ -26,6 +26,12 @@ flight. This flight speed is the actual speed at which the bird moves in air rel
 \code{FlightSpeedComponents} sets up the x,y,z- components of the speed at which the bird flies
 from pre-defined 3D position and timestep after which it estimates the actual speed at which the bird is flying.
 }
-\references{
-...
+\examples{
+x <- c(1:5)
+y <- c(1:5)
+z <- c(1:5)
+t <- c(1:5)
+bird <- BirdMorphParam(0.043, 0.4, 0.0171)
+FS.Components <- FlightSpeedComponents(t,x,y,z)
+
 }
